@@ -1,10 +1,10 @@
-
+import CartWidget from './CartWidget';
 function NavBar() {
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">KING OF GAMERS</a>
+                    <a class="navbar-brand" href="#">KING OF GAMING</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -15,6 +15,9 @@ function NavBar() {
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Ofertas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Novedades</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -29,10 +32,7 @@ function NavBar() {
                                 </ul>
                             </li>
                         </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Busca tu componente..." aria-label="Search"></input>
-                            <button class="btn btn-outline-success btn-outline-light" type="submit">Buscar</button>
-                        </form>
+                        <CartWidget></CartWidget>
                     </div>
                 </div>
             </nav>
