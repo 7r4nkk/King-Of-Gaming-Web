@@ -1,3 +1,4 @@
+import '../css/ItemCount.css'
 import { useState } from "react";
 
 export default function Counter() {
@@ -13,8 +14,8 @@ return (
     <div>
         <div class="contador">
             <h1 class="cantidad"> Cantidad: {counter}</h1>
-            <button class="buy" className={counter > 1 ? "buy" : "disabled"} onClick={disminuir}>-</button>
-            <button class="buy" className={counter < 5 ? "buy" : "disabled"} onClick={aumentar}>+</button>
+            <button class="buy btnn" className={counter > 1 ? "buy" : "disabled"} onClick={disminuir}>-</button>
+            <button class="buy btnn" className={counter < 5 ? "buy" : "disabled"} onClick={aumentar}>+</button>
         </div>    
     </div>
 );

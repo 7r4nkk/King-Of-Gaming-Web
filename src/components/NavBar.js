@@ -1,10 +1,11 @@
+import '../css/NavBar.css'
 import CartWidget from './CartWidget';
 function NavBar() {
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">KING OF GAMING</a>
+                    <a class="navbar-brand" href="#"><img src="bolt-alt-w.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"></img>KING OF GAMING</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -12,9 +13,6 @@ function NavBar() {
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Ofertas</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Novedades</a>
