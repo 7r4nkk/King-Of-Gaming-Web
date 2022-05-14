@@ -1,6 +1,6 @@
-import '../css/ProductCard.css'
-import ItemCount from './ItemCount';
-const ProductCard = ({item}) => {
+import '../../css/ItemListContainer1/ProductCardAmdProccesor.css'
+import ItemCount from '../ItemCount';
+const ProductCardAmdProccesor = ({item}) => {
     const {name, price, image} = item;
     return (
     <div className='item'>
@@ -13,7 +13,6 @@ const ProductCard = ({item}) => {
                 <h2 class="price">{price}$</h2>
                 <button class="agg btnn">AGREGAR AL CARRITO</button>
                 <div class="addOrdelete">
-                    <ItemCount></ItemCount>
                 </div>    
             </div>
         </div>
@@ -21,4 +20,4 @@ const ProductCard = ({item}) => {
     );
 };
 
-export default ProductCard;
+export default ProductCardAmdProccesor;

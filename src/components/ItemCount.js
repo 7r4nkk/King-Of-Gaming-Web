@@ -13,9 +13,17 @@ function disminuir() {
 return (
     <div>
         <div class="contador">
-            <h1 class="cantidad"> Cantidad: {counter}</h1>
-            <button class="buy btnn" className={counter > 1 ? "buy" : "disabled"} onClick={disminuir}>-</button>
-            <button class="buy btnn" className={counter < 5 ? "buy" : "disabled"} onClick={aumentar}>+</button>
+            <div include="form-input-select()">
+                <select required>
+    
+                    <option value="" hidden>Cantidad</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
         </div>    
     </div>
 );

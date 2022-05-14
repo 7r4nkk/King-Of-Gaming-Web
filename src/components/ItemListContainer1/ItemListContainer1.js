@@ -1,8 +1,8 @@
 import React from 'react';
-import '../css/ItemListContainer.css'
+import '../../css/ItemListContainer1/ItemListContainer1.css'
 import { useEffect, useState } from 'react';
-import {prodamd} from './ProductosAmd.js';
-import ItemList from './ItemList.js'
+import {processorsAmd} from '../ItemListContainer1/ProcessorsAmd';
+import ItemList from '../ItemListContainer1/ItemList1'
 const ItemListContainer = (prop) => {
   const [items, setItems] = useState([]);
 
@@ -11,7 +11,7 @@ const ItemListContainer = (prop) => {
     setTimeout(() => {
 
     const data = new Promise ((resolve, reject) => {
-      resolve(prodamd);
+      resolve(processorsAmd);
     });
       data.then(data =>{
       setItems(data);
