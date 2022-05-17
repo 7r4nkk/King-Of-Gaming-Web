@@ -13,7 +13,7 @@ return (
                     <h2>{product.name}<br></br><span>{product.subname}</span></h2>
                     <p>{product.details}</p>
                     <h3>{product.price}$</h3>
-                    <button class="agg btnn">AGREGAR AL CARRITO</button>
+                    <button className="agg btnn">AGREGAR AL CARRITO</button>
                     <ItemCount></ItemCount>
                 </div>
             </div>

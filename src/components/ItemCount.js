@@ -1,18 +1,11 @@
 import '../css/ItemCount.css'
-import { useState } from "react";
 
-export default function Counter() {
-const [counter, setCounter] = useState(1);
-function aumentar() {
-    setCounter(counter + 1);
-}
-function disminuir() {
-    setCounter(counter - 1);
-}
+import React from 'react'
 
-return (
+const ItemCount = () => {
+    return (
     <div>
-        <div class="contador">
+        <div className="contador">
             <div include="form-input-select()">
                 <select required>
     
@@ -28,3 +21,7 @@ return (
     </div>
 );
 }
+
+export default ItemCount
+
+

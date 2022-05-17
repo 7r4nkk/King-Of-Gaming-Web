@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,300&display=swap');
+
+@keyframes color{
+    0% {
+    color: rgba(51, 255, 0, 0.25);
+    }
+    50%{
+    color: rgb(51, 255, 0);
+    }
+    100% {
+    color: rgba(51, 255, 0, 0.25);
+    }
+}
+
+
+.bodyhome{
+    z-index: 100;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+.main-image{
+    position: relative;
+    background: url(../../public/home.jpg) no-repeat center;
+    background-size: cover;
+    height: 916px;
+    overflow: hidden;
+}
+.containerhome{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.containerhome h1{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    font-size: 120px;
+}
+.containerhome h1 .king{
+    padding: 0px 14px 6px 14px;
+    display: inline-block;
+    margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+.gamingg{
+    -webkit-text-stroke: 0.07vw chartreuse ;
+    animation-name: color;
+    animation-duration: 1.75s;
+    animation-iteration-count: infinite;
+}
+.draw-border {
+    box-shadow: inset 0 0 0 4px #ffffff;
+    color: #ffffff;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+    border-radius: 3px;
+    margin: 0px 20px;
+}
+.draw-border::before, .draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+.draw-border::before {
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+}
+.draw-border::after {
+    border-top-width: 4px;
+    border-right-width: 4px;
+}
+.draw-border:hover {
+    color: #1eff00;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+    border-color: #2bff00;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+}
+.draw-border:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+}
+.btt {
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font: 700 17px "Roboto Slab", sans-serif;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
+}
+.btt:focus {
+    outline: 2px dotted #65dc55;
+}

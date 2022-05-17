@@ -1,30 +1,32 @@
 import React from 'react';
 import '../../css/ItemListContainer1/ItemListContainer1.css'
 import { useEffect, useState } from 'react';
-import {processorsAmd} from '../ItemListContainer1/ProcessorsAmd';
+import {traerProductos} from './Products';
+import { useParams } from 'react-router-dom';
+import Loader from '../Loader'
 import ItemList from '../ItemListContainer1/ItemList1'
-const ItemListContainer = (prop) => {
-  const [items, setItems] = useState([]);
 
+const ItemListContainer = () => {
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  const {categoriaId} = useParams();
   useEffect(() => {
-
+    traerProductos(categoriaId)
+    .then((res) => {
+      setProducts(res);
+    })
+    .catch((error) => console.log(error))
+    
     setTimeout(() => {
-
-    const data = new Promise ((resolve, reject) => {
-      resolve(processorsAmd);
-    });
-      data.then(data =>{
-      setItems(data);
-    });
-    data.catch(err => {
-      console.log(err);
-    });
-  }, 2000);
-  }, []);
+        setIsLoading(false);
+    },1600);
+  }, [categoriaId]);
   return (
     <div className='body'>
-        <h1>{prop.titulo}</h1>
-        <ItemList items={items}/>
+      {isLoading ? (<Loader/>) : (<ItemList products={products}/>) }
+      
+        
     </div>
   )
 }
