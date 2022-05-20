@@ -1,14 +1,15 @@
 import '../css/ItemCount.css'
 
 import React from 'react'
+import { onAdd } from './ItemListContainer1/Products';
 
 const ItemCount = () => {
     return (
     <div>
         <div className="contador">
+            <button id='agregar' className="btncount" onClick={onAdd}>AGREGAR AL CARRITO</button>
             <div include="form-input-select()">
-                <select required>
-    
+                <select id='cantidad' required>
                     <option value="" hidden>Cantidad</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -17,7 +18,7 @@ const ItemCount = () => {
                     <option value="5">5</option>
                 </select>
             </div>
-        </div>    
+        </div>
     </div>
 );
 }

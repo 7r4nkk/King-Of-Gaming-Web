@@ -7,7 +7,6 @@ import ItemDetail from "./ItemDetail";
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState([]);
     let {id} = useParams();
-
     useEffect(() => {
         
         traerProducto(id)

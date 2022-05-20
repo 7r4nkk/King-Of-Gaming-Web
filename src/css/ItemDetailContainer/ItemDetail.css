@@ -80,12 +80,6 @@
     color: #000000;
     float: left;
 }
-.container .details button{
-    outline: none;
-    padding: 15px 20px;
-    margin-top: 15px;
-    float: right;
-}
 
 @media (max-width: 1080px){
     .container{
@@ -113,17 +107,6 @@
         margin-left: 0;
     }
     .details h3{
-        width: 40%;
-    }
-    .container .details button{
-        width: 60%;
-    }
-}
-@media (max-width: 500px){
-    .details h3{
-        width: 100%;
-    }
-    .container .details button{
-        width: 100%;
+        width: 43%;
     }
 }

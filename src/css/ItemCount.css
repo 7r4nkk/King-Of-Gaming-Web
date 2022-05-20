@@ -1,3 +1,9 @@
+.contador{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 10px;
+}
 select{
     background-color: rgba(255, 255, 255, 0.103);
     font-weight: 600;
@@ -5,18 +11,18 @@ select{
     border-radius: 5px;
     border-color: rgb(0, 0, 0);
     border-width: 2px;
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
 }
-@media (max-width: 499px){
-    select{
-        width: 100%;
-        margin-top: 10px;
-        
+@media (max-width: 1024px){
+    .contador{
+        width: 25%;
+        top: 0px;
+        left: 100px;
     }
 }
-@media (min-width: 1081px){
-    select{
-        width: 90px;
-        
+@media (max-width: 425px){
+    .contador{
+        width: 50%;
+        left: 20px;
     }
 }

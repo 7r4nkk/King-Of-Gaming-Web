@@ -215,4 +215,10 @@ export const traerProducto = () => {
     });
 };
 
+export function onAdd(){
+    var cantidadagg = document.getElementById('cantidad').value;
+    return( 
+    alert("Ha agregado al carrito" + " " + cantidadagg + " " + "productos" )
+    )
+}
 
