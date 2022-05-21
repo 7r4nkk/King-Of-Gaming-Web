@@ -1,4 +1,48 @@
-import '../css/ItemCount.css'
+
+import IconButton from "@mui/material/IconButton";
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
+import { Button } from "@mui/material";
+import { useState } from "react";
+
+export default function ItemCount({ initial, stock, onAdd }) {
+const [value, setValue] = useState(initial)
+    const countUp = () => {
+    if (value < stock) {
+    setValue(value + 1);
+    }
+};
+const countDown = () => {
+    if (value > initial) {
+    setValue(value - 1);
+    }
+};
+
+return (
+    <>
+    <IconButton onClick={countDown} aria-label="delete" color="primary">
+        <IndeterminateCheckBoxIcon color="success"></IndeterminateCheckBoxIcon>
+    </IconButton>
+    Cantidad: {value}
+    <IconButton onClick={countUp} aria-label="add" color="primary">
+        <AddBoxIcon color="success"></AddBoxIcon>
+    </IconButton>
+    <Button variant="outlined" color="success" onClick={() => onAdd(value)}>
+        Agregar al carrito
+    </Button>
+    </>
+);
+}
+
+
+
+
+
+
+
+
+
+/* import '../css/ItemCount.css'
 
 import React from 'react'
 import { onAdd } from './ItemListContainer1/Products';
@@ -23,6 +67,6 @@ const ItemCount = () => {
 );
 }
 
-export default ItemCount
+export default ItemCount */
 
 
