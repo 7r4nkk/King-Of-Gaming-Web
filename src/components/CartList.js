@@ -1,12 +1,13 @@
-/* import React, { useContext } from "react";
+import React, { useContext } from "react";
+import "../css/CartList.css"
 import { CartContext } from "./Context/CartContext";
 import { Link } from "react-router-dom";
 
 const CartList = () => {
-const { cartList, totalBuy, removeItem, emptyCart } = useContext(CartContext);
+const { cartList, totalBuy, removeProduct, emptyCart } = useContext(CartContext);
 
 return (
-    <div className="container">
+<div className="container cartlist">
     <div className="row mt-4 justify-content-center text-center">
         <div className="col-lg-3 col-sm-3"></div>
         <h5 className="col-lg-3 col-sm-3">Nombre:</h5>
@@ -23,7 +24,7 @@ return (
             <img src={product.img} alt={product.title} style={{ width: 150 }}></img>
             </div>
             <div className="col-lg-3 col-sm-3">
-            <h5>{product.title}</h5>
+            <h5>{product.name}</h5>
             </div>
             <div className="col-lg-2 col-sm-2">
             <h5>${product.price}</h5>
@@ -37,7 +38,7 @@ return (
             <div className="col-lg-1 col-sm-1">
             <button
                 className="btn btn-danger bg-gradient"
-                onClick={() => removeItem(product.id)}
+                onClick={() => removeProduct(product.id)}
             >
                 Eliminar{" "}
             </button>
@@ -59,14 +60,14 @@ return (
             Vaciar Carrito
         </button>
         <Link to="/checkout">
-            <button className="btn btn-danger bg-gradient ms-3">
+            <button className="btn btn-success bg-gradient ms-3">
             Procesar Compra
             </button>
         </Link>
         </div>
     </div>
-    </div>
+</div>
 );
 };
 
-export default CartList; */
+export default CartList;

@@ -7,7 +7,7 @@
     min-height: 100vh;
     background: #59fd0d07;
 }
-.container{
+.containerdetail{
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -19,7 +19,7 @@
     padding: 10px 10px 10px 10px;
     border-radius: 3px;
 }
-.container .imgBx{
+.containerdetail .imgBx{
     position: relative;
     display: flex;
     justify-content: center;
@@ -29,7 +29,7 @@
     background: #075700c0;
     border-radius: 3px;
 }
-.container .imgBx::before{
+.containerdetail .imgBx::before{
     content: 'KOG';
     position: absolute;
     top: -25px;
@@ -39,12 +39,12 @@
     font-size: 8em;
     font-weight: 800;
 }
-.container .imgBx img{
+.containerdetail .imgBx img{
     position: relative;
     width: 700px;
     left: 0px;
 }
-.container .details{
+.containerdetail .details{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,27 +53,27 @@
     box-sizing: border-box;
     padding: 40px;
 }
-.container .details h2{
+.containerdetail .details h2{
     margin: 15px;
     padding: 0;
     font-size: 2.5rem;
     line-height: 0.8em;
     color: rgb(0, 0, 0);
 }
-.container .details h2 span{
+.containerdetail .details h2 span{
     font-size: 0.4em;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #444;
 }
-.container .details p{
+.containerdetail .details p{
     max-width: 85%;
     margin-left: 12%;
     text-align: left;
     color: #222;
     font-size: 15px;
 }
-.container .details h3{
+.containerdetail .details h3{
     margin: 0;
     padding: 0;
     font-size: 2.5rem;

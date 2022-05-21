@@ -17,7 +17,7 @@ const onAdd = (cantidad) => {
 };
 return (
     <div className='bodyy'>
-        <div className='container'>
+        <div className='containerdetail'>
             <div className='imgBx'>
                 <img src={product.image}></img>
             </div>
@@ -28,9 +28,9 @@ return (
                     <h3>{product.price}$</h3>
                     {!goToCart ? (<ItemCount initial={1} stock={5} onAdd={onAdd} />) : (
                         <div className="d-flex justify-content-center">
-                            {/* <Link to={`/cart`} style={{ textDecoration: 'none' }}></Link> */}
+                            <Link to={`/cart`} style={{ textDecoration: 'none' }}>
                                 <Button variant="outlined" color='success'>Ir al carrito</Button>
-                            
+                            </Link>
                             <Link to={`/`} style={{ textDecoration: 'none' }}>
                                 <Button variant="outlined" color='success'>Seguir comprando</Button>
                             </Link>

@@ -31,12 +31,12 @@ function emptyCart() {
 
   // Contador carrito
 const cartCounter = () => {
-    return cartList.reduce((prev, prod) => prev + prod.cantidad, 0);
+    return cartList.reduce((prev, product) => prev + product.cantidad, 0);
 };
   // Subtotal compra
 const totalBuy = () => {
     return cartList.reduce(
-      (prev, prod) => prev + prod.cantidad * prod.price,
+      (prev, product) => prev + product.cantidad * product.price,
     0
     );
 };
