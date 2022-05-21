@@ -5,23 +5,23 @@ export const CartContext = createContext([]);
 const CartContextProvider = ({ children }) => {
 const [cartList, setCartList] = useState([]);
 
-function addToCart(item) {
-    const index = cartList.findIndex((i) => i.id === item.id);
+function addToCart(product) {
+    const index = cartList.findIndex((p) => p.id === product.id);
 
     if (index > -1) {
-    const oldItem = cartList[index].quantity;
+    const oldItem = cartList[index].cantidad;
     cartList.splice(index, 1);
     setCartList([
         ...cartList,
-        { ...item, quantity: item.quantity + oldItem },
+        { ...product, cantidad: product.cantidad + oldItem },
     ]);
     } else {
-    setCartList([...cartList, item]);
+    setCartList([...cartList, product]);
     }
 }
 
-const removeItem = (id) => {
-    const filteredCart = cartList.filter((item) => item.id !== id);
+const removeProduct = (id) => {
+    const filteredCart = cartList.filter((product) => product.id !== id);
     setCartList(filteredCart);
 };
 
@@ -31,12 +31,12 @@ function emptyCart() {
 
   // Contador carrito
 const cartCounter = () => {
-    return cartList.reduce((prev, prod) => prev + prod.quantity, 0);
+    return cartList.reduce((prev, prod) => prev + prod.cantidad, 0);
 };
   // Subtotal compra
 const totalBuy = () => {
     return cartList.reduce(
-      (prev, prod) => prev + prod.quantity * prod.price,
+      (prev, prod) => prev + prod.cantidad * prod.price,
     0
     );
 };
@@ -46,7 +46,7 @@ return (
     value={{
         cartList,
         addToCart,
-        removeItem,
+        removeProduct,
         emptyCart,
         cartCounter,
         totalBuy,

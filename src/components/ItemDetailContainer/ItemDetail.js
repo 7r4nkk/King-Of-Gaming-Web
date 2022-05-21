@@ -28,9 +28,9 @@ return (
                     <h3>{product.price}$</h3>
                     {!goToCart ? (<ItemCount initial={1} stock={5} onAdd={onAdd} />) : (
                         <div className="d-flex justify-content-center">
-                            <Link to={`/cart`} style={{ textDecoration: 'none' }}>
+                            {/* <Link to={`/cart`} style={{ textDecoration: 'none' }}></Link> */}
                                 <Button variant="outlined" color='success'>Ir al carrito</Button>
-                            </Link>
+                            
                             <Link to={`/`} style={{ textDecoration: 'none' }}>
                                 <Button variant="outlined" color='success'>Seguir comprando</Button>
                             </Link>
