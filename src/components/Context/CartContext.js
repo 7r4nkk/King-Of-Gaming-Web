@@ -16,21 +16,27 @@ function addToCart(product) {
         { ...product, cantidad: product.cantidad + oldItem },
     ]);
     } else {
-    setCartList([...cartList, product]);
+        setCartList([...cartList, product]);
     }
 }
 
 const removeProduct = (id) => {
     const filteredCart = cartList.filter((product) => product.id !== id);
+    localStorage.removeItem(filteredCart);
     setCartList(filteredCart);
+    if (cartList.length === 1){
+        limpiarLs();
+    }
 };
 
 function emptyCart() {
     setCartList([]);
+    limpiarLs();
 }
 
   // Contador carrito
 const cartCounter = () => {
+    addLocalStorage();
     return cartList.reduce((prev, product) => prev + product.cantidad, 0);
 };
   // Subtotal compra
@@ -41,6 +47,19 @@ const totalBuy = () => {
     );
 };
 
+function addLocalStorage(){
+    localStorage.setItem("carrito",JSON.stringify(cartList));
+}
+window.onload = function(){
+    const cartList = JSON.parse(localStorage.getItem("carrito"));
+    if(cartList){
+        setCartList(cartList);
+    }
+}
+function limpiarLs(){
+    addLocalStorage(cartList);
+    localStorage.clear();
+}
 return (
     <CartContext.Provider
     value={{

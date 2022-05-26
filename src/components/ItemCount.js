@@ -1,4 +1,3 @@
-
 import IconButton from "@mui/material/IconButton";
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
@@ -19,18 +18,18 @@ const countDown = () => {
 };
 
 return (
-    <>
-    <IconButton onClick={countDown} aria-label="delete" color="primary">
-        <IndeterminateCheckBoxIcon color="success"></IndeterminateCheckBoxIcon>
+    <div className="count">
+    <IconButton className='menos' onClick={countDown} aria-label="delete" color="primary">
+        <IndeterminateCheckBoxIcon className='menos' color="success"></IndeterminateCheckBoxIcon>
     </IconButton>
-    Cantidad: {value}
-    <IconButton onClick={countUp} aria-label="add" color="primary">
-        <AddBoxIcon color="success"></AddBoxIcon>
+    <span className='cant'>Cantidad: {value}</span>
+    <IconButton className='mas' onClick={countUp} aria-label="add" color="primary">
+        <AddBoxIcon className='mas' color="success"></AddBoxIcon>
     </IconButton>
     <Button variant="outlined" color="success" onClick={() => onAdd(value)}>
         Agregar al carrito
     </Button>
-    </>
+    </div>
 );
 }
 

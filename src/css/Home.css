@@ -24,7 +24,7 @@
     position: relative;
     background: url(../../public/home.jpg) no-repeat center;
     background-size: cover;
-    height: 916px;
+    height: 915px;
     overflow: hidden;
 }
 .containerhome{
@@ -109,4 +109,46 @@
 }
 .btt:focus {
     outline: 2px dotted #65dc55;
+}
+
+@media (max-width: 915px){
+    .containerhome h1{
+        font-size: 120px;
+    }
+    .draw-border{
+        margin: 5px;
+        font-size: 20px;
+    }
+}
+@media (max-width: 768px){
+    .draw-border{
+        margin: 5px;
+    }
+}
+@media (max-width: 425px){
+    .containerhome h1{
+        font-size: 100px;
+    }
+    .draw-border{
+        margin: 5px;
+        font-size: 17px;
+    }
+}
+@media (max-width: 375px){
+    .containerhome h1{
+        font-size: 85px;
+    }
+    .draw-border{
+        margin: 5px;
+        font-size: 15px;
+    }
+}
+@media (max-width: 320px){
+    .containerhome h1{
+        font-size: 80px;
+    }
+    .draw-border{
+        margin: 5px;
+        font-size: 14px;
+    }
 }

@@ -19,7 +19,7 @@ return (
     <div className='bodyy'>
         <div className='containerdetail'>
             <div className='imgBx'>
-                <img src={product.image}></img>
+                <img src={product.image} className='imgdetail'></img>
             </div>
             <div className='details'>
                 <div className='content'>
@@ -27,7 +27,7 @@ return (
                     <p>{product.details}</p>
                     <h3>{product.price}$</h3>
                     {!goToCart ? (<ItemCount initial={1} stock={5} onAdd={onAdd} />) : (
-                        <div className="d-flex justify-content-center">
+                        <div className="d-flex justify-content-center botones">
                             <Link to={`/cart`} style={{ textDecoration: 'none' }}>
                                 <Button variant="outlined" color='success'>Ir al carrito</Button>
                             </Link>

@@ -10,7 +10,7 @@ const ProductCard = ({product}) => {
             </div>
             <div className="contentBox">
                 <h3>{product.name}</h3>
-                <h2 className="price">{product.price}$</h2>
+                <h4 className="price">{product.price}$</h4>
                 <Link to={`/detail/${product.id}`}>
                     <button className="agg btnn">VER DETALLE</button>
                 </Link>
