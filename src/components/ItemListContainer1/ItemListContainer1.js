@@ -1,34 +1,60 @@
 import React from 'react';
 import '../../css/ItemListContainer1/ItemListContainer1.css'
 import { useEffect, useState } from 'react';
-import {traerProductos} from './Products';
-import { useParams } from 'react-router-dom';
-import Loader from '../Loader'
-import ItemList from '../ItemListContainer1/ItemList1'
+import { db } from '../utils/firebaseConfig';
+import { collection, query,where, getDocs } from 'firebase/firestore';
+import ProductCard from './ProductCard';
+import Loading from '../Loading';
+import {Link, useParams} from 'react-router-dom'
 
 const ItemListContainer = () => {
-  const [products, setProducts] = useState([]);
+  const [productosData, setProductosData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const categoria = useParams();
+  const productosCategoria = categoria.categoria;
   
-  const {categoriaId} = useParams();
   useEffect(() => {
-    traerProductos(categoriaId)
-    .then((res) => {
-      setProducts(res);
-    })
-    .catch((error) => console.log(error))
-    
+    const getProductos = async () => {
+      const q = query(
+        collection(db, 'productos'),
+        where('categoria', '==', productosCategoria)
+        );
+      const docs = [];
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        docs.push({...doc.data(), id: doc.id});
+      });
+      setProductosData(docs);
+    }
+    getProductos();
     setTimeout(() => {
-        setIsLoading(false);
-    },1600);
-  }, [categoriaId]);
-  return (
-    <div className='body'>
-      {isLoading ? (<Loader/>) : (<ItemList products={products}/>) }
-      
+      setIsLoading(false);
+    }, 1000);
+  }, [productosCategoria]);
         
-    </div>
-  )
+      return(
+          <>
+            {isLoading ? (
+              <div className='loading'>
+                <Loading/>
+              </div>
+            ):(
+              <div className='body'>
+                {productosData.map((data) => {
+                  return( 
+                    <Link
+                      to={`/details/${data.id}`}
+                      key={data.id}
+                      style={{ textDecoration: 'none' }}
+                    >  
+                      <ProductCard productosData={data}/>
+                    </Link>  
+                  )
+                })}
+              </div>
+            )}
+          </>
+      )
 }
 
-export default ItemListContainer
+export default ItemListContainer;
