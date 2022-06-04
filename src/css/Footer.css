@@ -1,0 +1,53 @@
+.footer {
+    font-family: 'Chakra Petch', sans-serif;
+    width: 100%;
+    float: left;
+    background: #000000;
+    min-height: 300px;
+}
+.footer-inner {
+    height: 300px;
+    display: table;
+    width: 100%;
+}
+.footer-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+.texto{
+    color: white
+}
+.textoB{
+    color: rgba(255, 255, 255, 0.5)
+}
+.footer-content .kogfooter {
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+.green{
+    color: rgb(0, 255, 0);
+}
+.linkweb:hover{
+    color: rgba(0, 255, 0, 0.5);
+}
+ul.social-media {
+    padding: 0;
+    text-align: center;
+}
+ul.social-media li {
+    list-style-type: none;
+    display: inline;
+    padding: 5px;
+}
+@media (max-width: 1024px){
+    .footer-content .kogfooter {
+        font-size: 40px;
+    }
+}
+@media (max-width: 425px){
+    .footer-content .kogfooter {
+        font-size: 35px;
+    }
+}

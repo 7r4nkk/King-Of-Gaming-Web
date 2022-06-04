@@ -1,5 +1,32 @@
 .cart{
-    background: rgba(255, 255, 255, 0.85);
-    padding: 0 0 15px 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding-bottom: 20px;
     border-radius: 3px;
+    font-family: 'Chakra Petch', sans-serif;
+    box-shadow: 0 8px 32px 0 rgba(31, 135, 31, 0.37);
+}
+.iracomprar{
+    font-family: 'Chakra Petch', sans-serif;
+	max-width: 250px;
+	--green: #15ff00;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: 'Chakra Petch', sans-serif;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, rgba(53, 253, 27, 0.1) 1%, transparent 40%,transparent 60% , rgba(35, 253, 27, 0.1) 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px rgba(35, 253, 27, 0.4), 0 0 9px 3px rgba(35, 253, 27, 0.1);
+}
+.iracomprar:hover{
+    color: #00b600;
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0 0 10px rgba(35, 253, 27, 0.6), 0 0 9px 3px rgba(27, 253, 38, 0.2);
 }

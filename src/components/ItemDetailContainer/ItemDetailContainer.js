@@ -3,9 +3,12 @@ import { useParams } from 'react-router-dom';
 import { db } from '../utils/firebaseConfig';
 import {collection, query, where, getDocs, documentId} from 'firebase/firestore';
 import ItemDetail from "./ItemDetail";
+import Footer from "../Footer";
+import Loading from "../Loading";
 
 
 const ItemDetailContainer = () => {
+    const [isLoading, setIsLoading] = useState(true);
     const [productosData, setProductosData] = useState([]);
     const {id} = useParams();
     useEffect(() => {
@@ -19,14 +22,26 @@ const ItemDetailContainer = () => {
             setProductosData(docs);
         }
         getProductos();
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 1000);
         }, [id]);
     return (
         <>
-            {productosData.map((data) => {
-                return (
-                    <ItemDetail key={data.id} productosData={data}/>
-                )
-            })}
+            {isLoading ? (
+                <div className='loading'>
+                    <Loading/>
+                </div>
+            ):(
+                <div>
+                    {productosData.map((data) => {
+                        return (
+                            <ItemDetail key={data.id} productosData={data}/>
+                        )
+                    })}
+                    <Footer></Footer>
+                </div>
+            )}
         </>
     )
 }

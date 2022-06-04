@@ -1,4 +1,5 @@
 .bodyy{
+    font-family: 'Chakra Petch', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +13,7 @@
     width: 900px;
     height: 600px;
     margin: 20px;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.85);
     box-shadow: 0 16px 62px 0 rgba(31, 135, 31, 0.5);
     backdrop-filter: blur( 3px );
     -webkit-backdrop-filter: blur( 3px );
@@ -58,27 +59,36 @@
     padding: 0;
     font-size: 2.5rem;
     line-height: 0.8em;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
 }
 .containerdetail .details h2 span{
     font-size: 0.4em;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #444;
+    color: rgb(138, 138, 138);
 }
 .containerdetail .details p{
     max-width: 85%;
     margin-left: 10%;
     text-align: left;
-    color: #222;
+    color: rgb(255, 255, 255);
     font-size: 15px;
+    font-weight: 600;
 }
 .containerdetail .details h3{
     margin: 0;
     padding: 0 0 0 45px;
     font-size: 2.5em;
-    color: #000000;
+    color: #ffffff;
     float: left;
+}
+
+.btns{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 5px;
 }
 
 @media (max-width: 1080px){
@@ -110,16 +120,31 @@
         width: 45%;
     }
 }
-@media (max-width: 450px){
+@media (max-width: 561px){
     .details h3{
-        width: 85%;
+        width: 92%;
     }
     .botones{
         width: 100%;
     }
 }
+@media (max-width: 450px){
+    .details h3{
+        width: 88%;
+    }
+    .botones{
+        width: 100%;
+        flex-direction: column;
+    }
+    .btns{
+        margin-top: 20px;
+    }
+}
 @media (max-width: 410px){
     .details h3{
         width: 87%;
+    }
+    .botones{
+        font-size: 10px;
     }
 }

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import '../../css/ItemDetailContainer/ItemDetail.css'
 import ItemCount from '../ItemCount'
+import '../../css/ItemCount.css'
 import { Button } from "@mui/material";
 import { CartContext } from "../Context/CartContext";
 import { Link } from "react-router-dom";
@@ -28,10 +29,10 @@ return (
                     {!goToCart ? (<ItemCount initial={1} stock={5} onAdd={onAdd} />) : (
                         <div className="d-flex justify-content-center botones">
                             <Link to={`/cart`} style={{ textDecoration: 'none' }}>
-                                <Button variant="outlined" color='success'>Ir al carrito</Button>
+                                <button className="agg btnn btns" variant="outlined" color='success'>Ir al carrito</button>
                             </Link>
-                            <Link to={`/`} style={{ textDecoration: 'none' }}>
-                                <Button variant="outlined" color='success'>Seguir comprando</Button>
+                            <Link to={`/`} style={{ textDecoration: 'none'}}>
+                                <button className="agg btnn btns" variant="outlined" color='success'>Seguir comprando</button>
                             </Link>
                         </div>
                     )}

@@ -3,6 +3,7 @@ import AddBoxIcon from '@mui/icons-material/AddBox';
 import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
 import { Button } from "@mui/material";
 import { useState } from "react";
+import '../css/ItemCount.css';
 
 export default function ItemCount({ initial, stock, onAdd }) {
 const [value, setValue] = useState(initial)
@@ -26,9 +27,9 @@ return (
     <IconButton className='mas' onClick={countUp} aria-label="add" color="primary">
         <AddBoxIcon className='mas' color="success"></AddBoxIcon>
     </IconButton>
-    <Button variant="outlined" color="success" onClick={() => onAdd(value)}>
+    <button className="aaa agg btnn" variant="outlined" color="success" onClick={() => onAdd(value)}>
         Agregar al carrito
-    </Button>
+    </button>
     </div>
 );
 }

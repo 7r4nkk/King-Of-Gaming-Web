@@ -16,7 +16,7 @@ return (
             <strong>No hay productos en tu carrito</strong>
             </h3>
             <h4 className="my-5">¿Quieres agregar productos?</h4>
-            <Link className="btn btn-success bg-gradient w-25" to="/">
+            <Link style={{ textDecoration: 'none' }} className="iracomprar" to="/">
             Ir a comprar
             </Link>
         </div>

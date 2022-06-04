@@ -15,3 +15,9 @@
     margin: 0 -1rem;
     padding: 20px;
 }
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+}

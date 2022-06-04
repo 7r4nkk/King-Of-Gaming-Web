@@ -36,7 +36,7 @@ return (
               <h5>${product.cantidad * product.price}</h5>
             </div>
             <div className="col-lg-1 col-sm-2">
-                <button className="btn btn-danger bg-gradient" onClick={() => removeProduct(product.id)}>Eliminar{" "}</button>
+                <button className="vaciarCarrito eliminar" onClick={() => removeProduct(product.id)}>Eliminar{" "}</button>
             </div>
             <hr></hr>
         </div>
@@ -44,9 +44,9 @@ return (
         <h3><b>Precio Total:</b></h3>
         <h4 className="text-center"><b>${totalBuy()}</b></h4>
         <div className="d-flex justify-content-center mt-5">
-            <button className="btn btn-danger bg-gradient me-3" onClick={emptyCart}>Vaciar Carrito</button>
-            <Link to="/checkout">
-                <button className="btn btn-success bg-gradient ms-3">Procesar Compra</button>
+            <button className="vaciarCarrito me-3 cartListbtn" onClick={emptyCart}>Vaciar Carrito</button>
+            <Link to="/shop">
+                <button className="procesarCompra ms-3 cartListbtn">Procesar Compra</button>
             </Link>
         </div>
     </div>
