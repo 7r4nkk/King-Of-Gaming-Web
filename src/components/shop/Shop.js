@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { db } from "../utils/firebaseConfig";
 import { CartContext } from "../Context/CartContext";
 import './Shop.css'
+import Footer from "../Footer";
 
 const Shop = () => {
 	const { cartList, totalBuy, emptyCart } = useContext(CartContext);
@@ -51,16 +52,17 @@ const Shop = () => {
 	};
 
 	return (
-		<div className="globalContainer">
+	<div>	
+		<div className="globalContainer" data-aos="fade-up" data-aos-duration="2000">
 			{creatingOrder ? (
-				<>
+				<div className="procesando">
 					<h4 className="mt-5 text-center h4">
 						<strong>Procesando su orden, espere un momento...</strong>
 					</h4>
-				</>
+				</div>
 			) : orderId ? (
 				<div className="container finContainer">
-					<div className="py-5 text-center txt mt-2">
+					<div className="py-5 text-center txt mt-2" data-aos="flip-right" data-aos-duration="3000">
 						<h2 className="mt-3">¡Gracias por elegir KING OF <span className='gamm'>GAMING</span>!</h2>
 						<h4 className="my-5">La compra se ha realizado exitosamente.</h4>
 						<h5 className="mt-5 id">El ID de tu compra es: {orderId}</h5>
@@ -138,7 +140,10 @@ const Shop = () => {
 					</div>
 				</div>
 			)}
-		</div>
+			
+		</div> 
+		<Footer></Footer>
+	</div>
 	);
 };
 

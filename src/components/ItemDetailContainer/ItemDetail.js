@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import '../../css/ItemDetailContainer/ItemDetail.css'
 import ItemCount from '../ItemCount'
 import '../../css/ItemCount.css'
-import { Button } from "@mui/material";
 import { CartContext } from "../Context/CartContext";
 import { Link } from "react-router-dom";
 
@@ -17,9 +16,9 @@ const onAdd = (cantidad) => {
 };
 return (
     <div className='bodyy'>
-        <div className='containerdetail'>
+        <div className='containerdetail' data-aos="flip-up" data-aos-duration="1000">
             <div className='imgBx'>
-                <img src={productosData.image} className='imgdetail'></img>
+                <img src={productosData.image} className='imgdetail' alt=''></img>
             </div>
             <div className='details'>
                 <div className='content'>

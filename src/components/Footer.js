@@ -74,7 +74,7 @@ export default function Footer() {
                                     1234 56 7890 <br />
                                     info@kingofgaming.store
                                     <br />
-                                    <Link className="green linkweb" style={{ textDecoration: 'none' }} to='/'> {" "}  www.kingofgaming.com.ar</Link>
+                                    <Link to='/' className="green linkweb" style={{ textDecoration: 'none' }} > {" "}  www.kingofgaming.com.ar</Link>
                                 </p>
                             </div>
                         </div>

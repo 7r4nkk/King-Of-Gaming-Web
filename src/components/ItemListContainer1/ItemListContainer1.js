@@ -43,7 +43,7 @@ const ItemListContainer = () => {
               </div>
             ):(
               <div>
-                <div className='body'>
+                <div className='body' data-aos="fade-up" data-aos-duration="3000">
                   {productosData.map((data) => {
                     return( 
                       <Link

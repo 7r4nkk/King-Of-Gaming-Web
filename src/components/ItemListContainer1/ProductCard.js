@@ -1,5 +1,4 @@
 import '../../css/ItemListContainer1/ProductCardAmdProccesor.css'
-import { Link } from 'react-router-dom';
 
 const ProductCard = ({productosData}) => {
     return (
