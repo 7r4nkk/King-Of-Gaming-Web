@@ -11,7 +11,10 @@
     color: rgba(51, 255, 0, 0.25);
     }
 }
-
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 .bodyhome{
     z-index: 100;
@@ -36,6 +39,11 @@
     color: white;
     font-weight: 700;
     text-transform: uppercase;
+    -webkit-animation: fadein 5s;
+    -moz-animation: fadein 5s;
+    -ms-animation: fadein 5s;
+    -o-animation: fadein 5s;
+    animation: fadein 5s;
 }
 .containerhome h1{
     font-family: 'Chakra Petch', sans-serif;
@@ -121,6 +129,9 @@
     }
 }
 @media (max-width: 768px){
+    .containerhome{
+        margin-top: -100px;
+    }
     .draw-border{
         margin: 5px;
     }
