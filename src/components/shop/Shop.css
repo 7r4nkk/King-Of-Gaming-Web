@@ -65,6 +65,7 @@ input{
 	font-size: 50px;
 }
 .procesando{
+	color: white;
 	margin-bottom: 384px;
 }
 @media (max-width: 425px){
