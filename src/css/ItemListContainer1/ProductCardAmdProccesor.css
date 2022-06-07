@@ -126,15 +126,45 @@ button.agg:hover:before {
         height: 550px;
     }
 }
-@media (max-width: 375px){
+@media (max-width: 425px){
     .card {
-        width: 300px;
-        height: 525px;
+        width: 175px;
+        height: 350px;
+    }
+    .price{
+        display: none;
+    }
+}
+@media (max-width: 411px){
+    .card {
+        width: 165px;
+        height: 350px;
+    }
+}
+@media (max-width: 391px){
+    .card {
+        width: 150px;
+        height: 320px;
+    }
+    button.agg{
+        font-size: 12px;
+    }
+}
+@media (max-width: 361px){
+    .card {
+        width: 135px;
+        height: 310px;
+    }
+    button.agg{
+        font-size: 11px;
     }
 }
 @media (max-width: 320px){
     .card {
         width: 250px;
         height: 475px;
+    }
+    button.agg{
+        font-size: 15px;
     }
 }

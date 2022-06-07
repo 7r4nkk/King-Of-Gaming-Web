@@ -25,4 +25,7 @@
     .loading{
         margin-top: 250px;
     }
+    .body{
+        margin: 0;
+    }
 }
