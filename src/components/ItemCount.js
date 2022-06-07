@@ -19,16 +19,16 @@ const countDown = () => {
 
 return (
     <div className="count">
-    <IconButton className='menos' onClick={countDown} aria-label="delete" color="primary">
-        <IndeterminateCheckBoxIcon className='menos' color="success"></IndeterminateCheckBoxIcon>
-    </IconButton>
-    <span className='cant'>Cantidad: {value}</span>
-    <IconButton className='mas' onClick={countUp} aria-label="add" color="primary">
-        <AddBoxIcon className='mas' color="success"></AddBoxIcon>
-    </IconButton>
-    <button className="aaa agg btnn" variant="outlined" color="success" onClick={() => onAdd(value)}>
-        Agregar al carrito
-    </button>
+        <IconButton className='menos' onClick={countDown} aria-label="delete" color="primary">
+            <IndeterminateCheckBoxIcon className='menos' color="success"></IndeterminateCheckBoxIcon>
+        </IconButton>
+        <span className='cant'>Cantidad: {value}</span>
+        <IconButton className='mas' onClick={countUp} aria-label="add" color="primary">
+            <AddBoxIcon className='mas' color="success"></AddBoxIcon>
+        </IconButton>
+        <button className="aaa agg btnn" variant="outlined" color="success" onClick={() => onAdd(value)}>
+            Agregar al carrito
+        </button>
     </div>
 );
 }

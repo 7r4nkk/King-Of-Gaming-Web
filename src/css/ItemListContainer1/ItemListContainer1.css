@@ -1,3 +1,9 @@
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
 .body{
     padding: 10px;
     display: flex;
@@ -5,6 +11,10 @@
     justify-content: space-around;
     box-shadow: 0 8px 32px 0 rgba(31, 135, 36, 0.37);
     border-radius: 10px;
+    -webkit-animation: fadein 3s;
+    -ms-animation: fadein 3s;
+    -o-animation: fadein 3s;
+    animation: fadein 3s;
 }
 .loading{
     display: flex;
