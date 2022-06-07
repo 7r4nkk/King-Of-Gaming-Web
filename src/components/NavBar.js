@@ -6,7 +6,7 @@ function NavBar() {
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid" data-aos="fade-down" data-aos-duration="3000">
-                        <Link to='/' style={{ textDecoration: 'none' }} className="navbar-brand"><img src="bolt-alt-w.svg" alt="" width="30" height="24" className="d-inline-block align-text-top flash"></img>KING OF <span className='gaming'>GAMING</span></Link>
+                        <Link to='/' style={{ textDecoration: 'none' }} className="navbar-brand">KING OF <span className='gaming'>GAMING</span></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
