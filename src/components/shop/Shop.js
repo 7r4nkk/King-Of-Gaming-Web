@@ -142,7 +142,9 @@ const Shop = () => {
 			)}
 			
 		</div> 
-		<Footer></Footer>
+			<div data-aos="fade-right" data-aos-duration="500">
+				<Footer></Footer>
+			</div>
 	</div>
 	);
 };

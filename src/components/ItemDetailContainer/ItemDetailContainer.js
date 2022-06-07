@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
         getProductos();
         setTimeout(() => {
             setIsLoading(false);
-        }, 1000);
+        }, 2000);
         }, [id]);
     return (
         <>

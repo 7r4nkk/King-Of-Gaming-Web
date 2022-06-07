@@ -32,7 +32,7 @@ const ItemListContainer = () => {
     getProductos();
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 2000);
   }, [productosCategoria]);
         
       return(
@@ -43,7 +43,7 @@ const ItemListContainer = () => {
               </div>
             ):(
               <div>
-                <div className='body' data-aos="fade-up" data-aos-duration="3000">
+                <div className='body' data-aos="fade-right" data-aos-duration="500">
                   {productosData.map((data) => {
                     return( 
                       <Link
