@@ -62,7 +62,7 @@ const Shop = () => {
 				</div>
 			) : orderId ? (
 				<div className="container finContainer">
-					<div className="py-5 text-center txt mt-2" data-aos="flip-right" data-aos-duration="3000">
+					<div className="py-5 text-center txt mt-2" data-aos="fade-up" data-aos-duration="500">
 						<h2 className="mt-3">¡Gracias por elegir KING OF <span className='gamm'>GAMING</span>!</h2>
 						<h4 className="my-5">La compra se ha realizado exitosamente.</h4>
 						<h5 className="mt-5 id">El ID de tu compra es: {orderId}</h5>

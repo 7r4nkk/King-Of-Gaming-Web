@@ -16,7 +16,7 @@ const onAdd = (cantidad) => {
 };
 return (
     <div className='bodyy'>
-        <div className='containerdetail' data-aos="flip-up" data-aos-duration="1000">
+        <div className='containerdetail' data-aos="fade-up" data-aos-duration="1500">
             <div className='imgBx'>
                 <img src={productosData.image} className='imgdetail' alt=''></img>
             </div>
