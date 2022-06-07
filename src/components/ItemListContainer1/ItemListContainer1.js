@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { db } from '../utils/firebaseConfig';
 import { collection, query, where, orderBy, getDocs } from 'firebase/firestore';
 import ProductCard from './ProductCard';
-import Loading from '../Loading';
+import LinearIndeterminate from '../Loading';
 import {Link, useParams} from 'react-router-dom'
 import Footer from '../Footer';
 
@@ -39,11 +39,11 @@ const ItemListContainer = () => {
           <>
             {isLoading ? (
               <div className='loading'>
-                <Loading/>
+                <LinearIndeterminate/>
               </div>
             ):(
               <div>
-                <div className='body' data-aos="fade-right" data-aos-duration="500">
+                <div className='body'>
                   {productosData.map((data) => {
                     return( 
                       <Link
