@@ -137,6 +137,9 @@
     }
 }
 @media (max-width: 425px){
+    .containerhome{
+        margin-top: -145px;
+    }
     .containerhome h1{
         font-size: 100px;
     }
