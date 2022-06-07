@@ -7,7 +7,7 @@ const CartList = () => {
 const { cartList, totalBuy, removeProduct, emptyCart,} = useContext(CartContext);
 
 return (
-<div className="container cartList" data-aos="fade-up" data-aos-duration="1500">
+<div className="container cartList" data-aos="fade-up" data-aos-duration="500">
     <div className="row mt-3 tabla justify-content-center text-center">
         <div className="col-lg-3 col-sm-2"></div>
         <h5 className="col-lg-4 col-sm-2">Nombre:</h5>

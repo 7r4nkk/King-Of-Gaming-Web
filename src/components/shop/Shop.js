@@ -53,7 +53,7 @@ const Shop = () => {
 
 	return (
 	<div>	
-		<div className="globalContainer" data-aos="fade-up" data-aos-duration="2000">
+		<div className="globalContainer" data-aos="fade-up" data-aos-duration="500">
 			{creatingOrder ? (
 				<div className="procesando">
 					<h4 className="mt-5 text-center h4">
@@ -142,7 +142,7 @@ const Shop = () => {
 			)}
 			
 		</div> 
-			<div data-aos="fade-right" data-aos-duration="500">
+			<div data-aos="fade-right" data-aos-duration="300">
 				<Footer></Footer>
 			</div>
 	</div>
