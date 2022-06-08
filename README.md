@@ -45,6 +45,10 @@ CHECKOUT:
 *En esta seccion se finaliza la compra rellenando un formulario con los datos del comprador. El pedido es cargado en Firebase y se genera un ID de compra.*
 ![procesarcompra](https://user-images.githubusercontent.com/95661597/172537849-117f07ee-0816-4b43-8c01-ed8f3fb65151.png)
 
+DEMOSTRACION DE USO:
+
+https://user-images.githubusercontent.com/95661597/172541299-d4cb7bca-540c-48a4-b531-be4def6ee22f.mp4
+
 
 
 
