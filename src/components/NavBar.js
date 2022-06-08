@@ -40,5 +40,5 @@ function NavBar() {
         </div>
 );
 }
-
+/* asd */
 export default NavBar;
