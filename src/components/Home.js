@@ -10,11 +10,11 @@ return (
                 <Link to='/categoria/procesadores'style={{ textDecoration: 'none' }}>    
                     <button className="btt draw-border">CPU</button>
                 </Link>
-                <Link to='/categoria/placasdevideo' style={{ textDecoration: 'none' }}>
-                    <button className="btt draw-border">GPU</button>
-                </Link>
                 <Link to='/categoria/motherboards' style={{ textDecoration: 'none' }}>
                     <button className="btt draw-border">MOBO</button>
+                </Link>
+                <Link to='/categoria/placasdevideo' style={{ textDecoration: 'none' }}>
+                    <button className="btt draw-border">GPU</button>
                 </Link>
             </div>
         </div>
