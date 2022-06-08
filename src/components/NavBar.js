@@ -25,9 +25,9 @@ function NavBar() {
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><Link to='/categoria/procesadores' style={{ textDecoration: 'none' }} className="dropdown-item">Procesadores</Link></li>
                                     <li><hr className="dropdown-divider"></hr></li>
-                                    <li><Link to='/categoria/placasdevideo' style={{ textDecoration: 'none' }} className="dropdown-item">Placas de video</Link></li>
-                                    <li><hr className="dropdown-divider"></hr></li>
                                     <li><Link to='/categoria/motherboards' style={{ textDecoration: 'none' }} className="dropdown-item">Motherboards</Link></li>
+                                    <li><hr className="dropdown-divider"></hr></li>
+                                    <li><Link to='/categoria/placasdevideo' style={{ textDecoration: 'none' }} className="dropdown-item">Placas de video</Link></li>
                                 </ul>   
                             </li>
                         </ul>
