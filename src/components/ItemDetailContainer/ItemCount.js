@@ -2,7 +2,7 @@ import IconButton from "@mui/material/IconButton";
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
 import { useState } from "react";
-import '../css/ItemCount.css';
+import '../../css/ItemDetailContainer/ItemCount.css';
 
 export default function ItemCount({ initial, stock, onAdd }) {
 const [value, setValue] = useState(initial)

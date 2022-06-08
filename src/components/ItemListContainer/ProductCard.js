@@ -1,4 +1,4 @@
-import '../../css/ItemListContainer1/ProductCardAmdProccesor.css'
+import '../../css/ItemListContainer/ProductCardAmdProccesor.css'
 
 const ProductCard = ({productosData}) => {
     return (

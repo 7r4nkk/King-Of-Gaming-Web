@@ -131,6 +131,9 @@
     }
 }
 @media (max-width: 450px){
+    .itemDetailContainerGlobal{
+        padding-top: 56px;
+    }
     .details h3{
         width: 88%;
     }
