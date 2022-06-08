@@ -5,6 +5,7 @@ import {collection, query, where, getDocs, documentId} from 'firebase/firestore'
 import ItemDetail from "./ItemDetail";
 import Footer from "../Footer";
 import Loading from "../Loading";
+import '../../css/ItemDetailContainer/ItemDetail.css'
 
 
 const ItemDetailContainer = () => {
@@ -27,7 +28,7 @@ const ItemDetailContainer = () => {
         }, 2000);
         }, [id]);
     return (
-        <>
+        <div className='itemDetailContainerGlobal'>
             {isLoading ? (
                 <div className='loading'>
                     <Loading/>
@@ -42,7 +43,7 @@ const ItemDetailContainer = () => {
                     <Footer></Footer>
                 </div>
             )}
-        </>
+        </div>
     )
 }
         

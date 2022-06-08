@@ -36,7 +36,7 @@ const ItemListContainer = () => {
   }, [productosCategoria]);
         
       return(
-          <>
+          <div className='itemListGlobal'>
             {isLoading ? (
               <div className='loading'>
                 <LinearIndeterminate/>
@@ -61,7 +61,7 @@ const ItemListContainer = () => {
               </div>  
             )}
             
-          </>
+          </div>
       )
 }
 

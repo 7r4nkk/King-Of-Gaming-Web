@@ -1,4 +1,8 @@
+.cartGlobal{
+    padding-top: 75px;
+}
 .cart{
+    padding-top: 50px;
     color: white;
     background: rgba(0, 0, 0, 0.7);
     padding-bottom: 20px;

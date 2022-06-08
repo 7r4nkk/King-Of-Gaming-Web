@@ -96,7 +96,6 @@ const Shop = () => {
 											<label className="form-label">Teléfono</label>
 											<input
 												type="number"
-												onkeydown="return event.keyCode !== 69"
 												className="form-control form-control--color"
 												name="phone"
 												defaultValue={formData.phone}

@@ -2,15 +2,15 @@
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
-
+.itemListGlobal{
+    padding-top: 65px;
+}
 .body{
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     box-shadow: 0 8px 32px 0 rgba(31, 135, 36, 0.37);
-    border-radius: 10px;
     -webkit-animation: fadein 3s;
     -ms-animation: fadein 3s;
     -o-animation: fadein 3s;
@@ -25,6 +25,6 @@
     .body{
         margin: 0;
         border-radius: 0px;
-        border: 1px solid rgba(9, 255, 0, 0.479);
+        box-shadow: 0 8px 32px 0 rgba(0, 255, 13, 0.37);
     }
 }

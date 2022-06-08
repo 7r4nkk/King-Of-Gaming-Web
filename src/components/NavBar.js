@@ -3,9 +3,9 @@ import '../css/NavBar.css'
 import {Link} from 'react-router-dom'
 function NavBar() {
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div className="container-fluid" data-aos="fade-down" data-aos-duration="3000">
+        <div className='navGlobal'>
+            <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+                <div className="container-fluid">
                         <Link to='/' style={{ textDecoration: 'none' }} className="navbar-brand">KING OF <span className='gaming'>GAMING</span></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -15,9 +15,9 @@ function NavBar() {
                             <li className="nav-item">
                                 <Link to='/' style={{ textDecoration: 'none' }} className="nav-link active" aria-current="page">Inicio</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link to='/novedades' style={{ textDecoration: 'none' }} className="nav-link">Novedades</Link>
-                            </li>
+                            </li> */}
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href='/'>
                                     Productos
